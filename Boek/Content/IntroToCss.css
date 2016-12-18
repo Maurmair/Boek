@@ -9,6 +9,12 @@
         font-size: 26px;
     }
     .special{
-        color: black;
-        font-size: 16px;
-    }
+    color: purple;
+    font-size: xx-large;
+}
+.introduction {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: normal;
+    color: #800000;
+}
