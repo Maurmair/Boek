@@ -294,6 +294,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Site.Master" />
     <Content Include="Views\UserDemographics\Index.cshtml" />
+    <Content Include="Views\UserDemographics\Manage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
