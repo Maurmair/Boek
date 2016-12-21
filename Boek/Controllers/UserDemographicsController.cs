@@ -46,7 +46,16 @@ namespace Boek.Controllers
         // GET: UserDemographics/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var model = new UserDemographics
+            {
+                Gender = "Male",
+                Birthdate = new DateTime(2000, id, id),
+                MaritalStatus = "Married",
+                OwnHome = true,
+                TotalPeopleInHome = id,
+                Hobbies = new List<string> { "Gardening", "Other" }
+            };
+            return View("Manage", model);
         }
 
         // POST: UserDemographics/Edit/5

@@ -67,12 +67,14 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Hobbies, htmlAttributes: new { @class="control-label col-md-2"})
+            @Html.LabelFor(model => model.Hobbies, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @foreach (string hobby in hobbyList)
                 {
+                    string checkedText = Model.Hobbies.Contains(hobby)? "checked" : string.Empty;
                     <span>
-                        <input name="hobbies" value="@hobby" type="checkbox" />
+                        <input name="hobbies" value="@hobby" type="checkbox" @checkedText />
+                        @hobby
                     </span>
                 }
             </div>
