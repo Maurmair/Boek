@@ -320,6 +320,7 @@
     <Content Include="Views\UserDemographics\Index.cshtml" />
     <Content Include="Views\UserDemographics\Manage.cshtml" />
     <Content Include="WebForms.Master" />
+    <Content Include="Views\Shared\_MVCLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
