@@ -169,6 +169,20 @@
     <Compile Include="Admin\ManageItem.aspx.designer.cs">
       <DependentUpon>ManageItem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManageItemss.aspx.cs">
+      <DependentUpon>ManageItemss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageItemss.aspx.designer.cs">
+      <DependentUpon>ManageItemss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -229,13 +243,23 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="WebForms.Master.cs">
+      <DependentUpon>WebForms.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms.Master.designer.cs">
+      <DependentUpon>WebForms.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\ManageItem.aspx" />
+    <Content Include="Admin\ManageItemss.aspx" />
+    <Content Include="Admin\OrderList.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\IntroToCss.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\RentMyWrox.css" />
     <Content Include="Default.aspx" />
     <Content Include="Demonstrations\Page1.aspx" />
     <Content Include="Demonstrations\Page2.aspx" />
@@ -295,6 +319,7 @@
     <Content Include="Site.Master" />
     <Content Include="Views\UserDemographics\Index.cshtml" />
     <Content Include="Views\UserDemographics\Manage.cshtml" />
+    <Content Include="WebForms.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

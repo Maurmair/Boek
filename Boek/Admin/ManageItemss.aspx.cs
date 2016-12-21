@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Boek.Admin
 {
-    public partial class ManageItem1 : System.Web.UI.Page
+    public partial class ManageItem : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
