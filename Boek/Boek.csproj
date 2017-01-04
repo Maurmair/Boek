@@ -162,6 +162,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ItemList.aspx.cs">
+      <DependentUpon>ItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ItemList.aspx.designer.cs">
+      <DependentUpon>ItemList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ManageItem.aspx.cs">
       <DependentUpon>ManageItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,6 +196,13 @@
     </Compile>
     <Compile Include="Admin\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -250,11 +271,17 @@
     <Compile Include="WebForms.Master.designer.cs">
       <DependentUpon>WebForms.Master</DependentUpon>
     </Compile>
+    <Compile Include="WebFormsBaseClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\ItemList.aspx" />
     <Content Include="Admin\ManageItem.aspx" />
     <Content Include="Admin\ManageItemss.aspx" />
     <Content Include="Admin\OrderList.aspx" />
+    <Content Include="Admin\UserList.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\IntroToCss.css" />
@@ -321,6 +348,9 @@
     <Content Include="Views\UserDemographics\Manage.cshtml" />
     <Content Include="WebForms.Master" />
     <Content Include="Views\Shared\_MVCLayout.cshtml" />
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

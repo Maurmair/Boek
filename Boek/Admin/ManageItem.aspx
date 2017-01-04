@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebForms.Master" AutoEventWireup="true" CodeBehind="ManageItem.aspx.cs" Inherits="Boek.Admin.ManageItem1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebForms.Master" AutoEventWireup="true" CodeBehind="ManageItem.aspx.cs" Inherits="Boek.Admin.ManageItem1"  MetaTagDescription="Manage the items that are available to be checked out from the library" MetaTagKeywords ="Tools, Lending Library, Manage Items, actual useful keywords here"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
     <link href="../Content/RentMyWrox.css" rel="stylesheet" type="text/css" />
