@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -176,6 +178,13 @@
     <Compile Include="Admin\ItemList.aspx.designer.cs">
       <DependentUpon>ItemList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManageHobby.aspx.cs">
+      <DependentUpon>ManageHobby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageHobby.aspx.designer.cs">
+      <DependentUpon>ManageHobby.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ManageItem.aspx.cs">
       <DependentUpon>ManageItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +220,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserDemographicsController.cs" />
     <Compile Include="Default.aspx.cs">
@@ -251,9 +261,21 @@
     <Compile Include="Demonstrations\IntroToCss.aspx.designer.cs">
       <DependentUpon>IntroToCss.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701051329044_InitialCreate.cs" />
+    <Compile Include="Migrations\201701051329044_InitialCreate.Designer.cs">
+      <DependentUpon>201701051329044_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701051553336_Adding Items.cs" />
+    <Compile Include="Migrations\201701051553336_Adding Items.Designer.cs">
+      <DependentUpon>201701051553336_Adding Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Hobby.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RentMyWroxContext.cs" />
     <Compile Include="Models\UserDemographics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -285,6 +307,7 @@
   <ItemGroup>
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\ItemList.aspx" />
+    <Content Include="Admin\ManageHobby.aspx" />
     <Content Include="Admin\ManageItem.aspx" />
     <Content Include="Admin\ManageItemss.aspx" />
     <Content Include="Admin\OrderList.aspx" />
@@ -317,7 +340,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -360,6 +385,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -371,6 +398,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701051329044_InitialCreate.resx">
+      <DependentUpon>201701051329044_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701051553336_Adding Items.resx">
+      <DependentUpon>201701051553336_Adding Items.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

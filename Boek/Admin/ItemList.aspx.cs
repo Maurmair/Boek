@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Boek.Models;
 
 namespace Boek.Admin
 {
@@ -13,5 +14,12 @@ namespace Boek.Admin
         {
 
         }
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            string id = row.Cells[1].Text;
+            Response.Redirect(@"ManageItem\" + id);
+        }
+
     }
 }
