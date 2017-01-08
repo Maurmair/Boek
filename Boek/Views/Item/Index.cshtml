@@ -1,7 +1,40 @@
 ﻿@model IEnumerable<Boek.Models.Item>
 @{
+
+
+    const string selectedText = "selected";
     ViewBag.Title = "Index";
-}
+    int itemCount = ViewBag.ItemCount;
+    int pageSize = ViewBag.PageSize;
+    int pageNumber = ViewBag.PageNumber;
+    int fullPageCount = (itemCount + pageSize - 1) / pageSize;
+    string sortExp = ViewBag.SortExpression;
+ }
+
+<form>
+    <div>
+        <div class="paginationline">
+            <span class="leftside">
+                Sort by:
+                <select name="sortExp"
+                        onchange='if(this.value !="@sortExp"){this.form.submit();}'>
+                    <option value="name-asc" @if (sortExp == "name-asc") { @selectedText}> Name </option>
+                    <option value="name_desc" @if(sortExp == "name_desc") { @selectedText}> Name (Za to A) </option>
+                    <option value="cost_asc" @if (sortExp == "cost_asc") { @selectedText}> Price </option>
+                    <option value="cost_desc" @if (sortExp == "cost_desc") { @selectedText}> Price (high to low) </option>
+                </select>
+            </span>
+            <span class="rightside">
+                @if (pageNumber > 1) //means there are additional pages backwards
+                {
+                    <a href="?pageNumber=@(pageNumber +1)&pageQty=@pageSize&sortExp=@sortExp"> Next Page </a>
+                }
+            </span>
+        </div>
+    </div>
+</form>
+<br />
+
 @foreach (var item in Model)
 {
     <div>

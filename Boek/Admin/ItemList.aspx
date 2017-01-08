@@ -2,14 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" 
+        DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." 
+        AllowPaging="True" AllowSorting="True" PageSize="5" PagerSettings-Mode="NumericFirstLast"
+        PagerSetting-Visible="true" PagerSettings-Position="TopAndBottom" PagerSettings-PageButtonCount="3"
+        OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
+        >
     <Columns>
         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" ItemStyle-HorizontalAlign="Center" DeleteText="Delete<br/>" SelectText="Full_Edit<br/>" EditText="Quick_Edit<br/>" />
         <asp:BoundField DataField="Id" HeaderText="Id " ReadOnly="True" SortExpression="Id" />
         <asp:BoundField DataField="Name" HeaderText="Name " SortExpression="Name" />
-        <asp:BoundField DataField="Description" HeaderText="Description " SortExpression="Description" />
+        <asp:BoundField DataField="Description" HeaderText="Description " />
         <asp:BoundField DataField="ItemNumber" HeaderText="ItemNumber " SortExpression="ItemNumber" />
-        <asp:BoundField DataField="Picture" HeaderText="Picture " SortExpression="Picture" />
+        <asp:BoundField DataField="Picture" HeaderText="Picture " />
         <asp:BoundField DataField="Cost" HeaderText="Cost " SortExpression="Cost" />
         <asp:BoundField DataField="CheckedOut" HeaderText="CheckedOut " SortExpression="CheckedOut" />
         <asp:BoundField DataField="DueBack" HeaderText="DueBack " SortExpression="DueBack" />
